@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double firstDouble = scanner.nextDouble();
+        int firstInt = (int) firstDouble;
+        int secondInput = scanner.nextInt();
+        int thirdInput = scanner.nextInt();
+        int fourthInput = scanner.nextInt();
+        System.out.println(firstInt);
+        System.out.println(firstInt + 1);
+        System.out.println(thirdInput * 2);
+        System.out.println((int) Math.pow(2, fourthInput));
+        scanner.close();
+    }
+}

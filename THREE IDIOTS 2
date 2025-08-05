@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int d = scanner.nextInt();
+
+        double x = (a + c) / 2.0;
+        double y = (b + d) / 2.0;
+
+        System.out.printf("Binoy's house is located at (%.1f,%.1f)\n", x, y);
+
+        scanner.close();
+    }
+}

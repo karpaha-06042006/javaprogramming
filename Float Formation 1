@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double num = scanner.nextDouble();
+        float fnum = (float) num;
+        System.out.printf("%.6f\n", fnum);
+        System.out.printf("%.4f\n", num);
+        System.out.println(num);
+        System.out.println((int) Math.round(num));
+        scanner.close();
+    }
+}

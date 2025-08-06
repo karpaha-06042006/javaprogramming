@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int copiesSold = scanner.nextInt();
+        int costPerCopy = scanner.nextInt();
+        int costToAgency = scanner.nextInt();
+        double agencyEarningPerCopy = 0.95 * costPerCopy;
+        double profitPerCopy = agencyEarningPerCopy - costToAgency;
+        double totalProfit = profitPerCopy * copiesSold;
+        System.out.println("Number of copies sold:" + copiesSold);
+        System.out.println("Cost of each copy:" + costPerCopy);
+        System.out.println("Cost spent by agency on each newspaper:" + costToAgency);
+        System.out.printf("The profit obtained is Rs.%.2f\n", totalProfit);
+        scanner.close();
+    }
+}

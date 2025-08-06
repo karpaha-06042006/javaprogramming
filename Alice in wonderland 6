@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read input from user
+        int input = scanner.nextInt();
+
+        // Print the first line
+        System.out.println("Bird said:" + input);
+
+        // Determine the path number
+        int path;
+        if (input % 5 == 0) {
+            path = input / 5;
+        } else {
+            path = (input / 5) + 1;
+        }
+
+        // Print the second line
+        System.out.println("Alice must go in path-" + path);
+
+        scanner.close();
+    }
+}

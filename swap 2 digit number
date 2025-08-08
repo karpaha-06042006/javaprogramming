@@ -1,0 +1,20 @@
+import java.util.*;
+public class SwapDigit{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String numStr = String.valueOf(num);
+        int len = numStr.length();
+        if(len==1){
+            System.out.println(3);
+            return;
+        }
+        char[] digits = numStr.toCharArray();
+        char temp = digits[0];
+        digits[0] = digits[1];
+        digits[1] = temp;
+        String swapped = new String(digits);
+        System.out.println(swapped.substring(0, 2));
+        
+    }
+}

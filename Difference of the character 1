@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class CharacterDifference {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int starCount = 0;
+        int hashCount = 0;
+        for (char ch : input.toCharArray()) {
+            if (ch == '*') {
+                starCount++;
+            } else if (ch == '#') {
+                hashCount++;
+            }
+        }
+        int difference = starCount - hashCount;
+        String result;
+        if (difference == 0) {
+            result = "0";
+        } else if (difference > 0) {
+            result = String.format("%02d", difference); 
+        } else {
+            result = "-" + String.format("%02d", Math.abs(difference));  
+        }
+
+        System.out.println("The Difference of the character in the given string: " + result);
+    }
+}

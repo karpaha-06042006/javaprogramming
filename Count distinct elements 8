@@ -1,0 +1,23 @@
+import java.util.*;
+public class DistinctElementsSorted {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        Arrays.sort(arr);
+        int distinctCount = 0;
+        for (int i = 0; i < n; i++) {
+            if (i == 0 || arr[i] != arr[i - 1]) {
+                distinctCount++;
+            }
+        }
+        if (distinctCount == 1) {
+            System.out.println("There are 1 distinct element in the array.");
+        } else {
+            System.out.println("There are " + distinctCount + " distinct elements in the array.");
+        }
+    }
+}

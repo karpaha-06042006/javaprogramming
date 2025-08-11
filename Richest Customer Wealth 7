@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class RichestCustomerWealth {
+    public static int getRichestCustomerWealth(int[][] accounts) {
+        int maxWealth = 0;
+        for (int i = 0; i < accounts.length; i++) {
+            int currentWealth = 0;
+            for (int j = 0; j < accounts[i].length; j++) {
+                currentWealth += accounts[i][j];
+            }
+            if (currentWealth > maxWealth) {
+                maxWealth = currentWealth;
+            }
+        }
+        return maxWealth;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+        int[][] accounts = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                accounts[i][j] = scanner.nextInt();
+            }
+        }
+        int richestWealth = getRichestCustomerWealth(accounts);
+        System.out.println("Richest Customer Wealth is " + richestWealth);
+    }
+}

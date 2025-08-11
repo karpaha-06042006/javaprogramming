@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class TimeConverter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int hours = sc.nextInt();
+        int minutes = sc.nextInt();
+        int seconds = sc.nextInt();
+        int extraMinutes = seconds / 60;
+        seconds = seconds % 60;
+        minutes += extraMinutes;
+        int extraHours = minutes / 60;
+        minutes = minutes % 60;
+        hours += extraHours;
+        System.out.println("Total Number of hours is " + hours);
+        System.out.println("Total Number of minutes is " + minutes);
+        System.out.println("Total Number of seconds is " + seconds);
+    }
+}

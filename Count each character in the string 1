@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class CharacterFrequencyAlternative {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        printCharacterFrequency(input);
+    }
+    public static void printCharacterFrequency(String str) {
+        boolean[] counted = new boolean[256]; 
+        int length = str.length();
+        for (int i = 0; i < length; i++) {
+            char ch = str.charAt(i);
+            if (!counted[ch]) {
+                int count = 0;
+                for (int j = 0; j < length; j++) {
+                    if (str.charAt(j) == ch) {
+                        count++;
+                    }
+                }
+                System.out.println(ch + "   " + count);
+                counted[ch] = true; 
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class ConcatenateStrings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String first = scanner.nextLine().trim();
+        String second = scanner.nextLine().trim();
+        String result = first + second;
+        System.out.println(result);
+    }
+}

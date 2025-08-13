@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class CheckRepeatedChars {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        boolean hasRepeated = false;
+        int[] freq = new int[256]; 
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            freq[ch]++;
+            if (freq[ch] > 1) {
+                hasRepeated = true;
+                break;
+            }
+        }
+        if (hasRepeated) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
